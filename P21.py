@@ -8,7 +8,7 @@ import pytz
 
 os.environ['DISPLAY'] = ':0'  # For Linux GUI automation (skip if on Windows)
 
-PHONE_NUMBER = "+919372083050"   # Change this to your WhatsApp number
+PHONE_NUMBER = "+91XXXXXXXXXX"   # Change this to your WhatsApp number
 INDIA_TZ = pytz.timezone("Asia/Kolkata")
 
 # ------------------- Helper Functions -------------------
@@ -106,3 +106,4 @@ def ask_and_schedule():
 # ------------------- Run Once -------------------
 if __name__ == "__main__":
     ask_and_schedule()
+

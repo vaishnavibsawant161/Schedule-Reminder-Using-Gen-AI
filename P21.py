@@ -88,13 +88,13 @@ def ask_and_schedule():
             minute = int(match.group(2))
 
             # Remove the time part from spoken_text to keep only the task description
-            task_desc = re.sub(r"\b\d{1,2}\s*past\s*\d{1,2}\b", "", spoken_text).strip()
+            task_desc = re.sub(r"\b\d{1,2}\s*o\s*\d{1,2}\b", "", spoken_text).strip()
 
             task_entry = f"{hour:02d}:{minute:02d} - {task_desc}"
             tasks.append(task_entry)
             speak("Got it. Task noted.")
         else:
-            speak("Please say time in format like '10 past 30 task name'.")
+            speak("Please say time in format like '10 o 30 task name'.")
 
     speak("Okay, scheduling your reminders now.")
     for task in tasks:
@@ -106,4 +106,5 @@ def ask_and_schedule():
 # ------------------- Run Once -------------------
 if __name__ == "__main__":
     ask_and_schedule()
+
 
